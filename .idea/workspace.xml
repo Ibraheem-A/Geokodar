@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90f8ca08-6988-4284-897a-fc08ae7af3d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/EsriConnector.java" afterDir="false" />
+    <list default="true" id="90f8ca08-6988-4284-897a-fc08ae7af3d6" name="Default Changelist" comment="moved file handling methods to FileManager class">
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeoCoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeoCoder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +56,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588857965463</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added Esri connector to process API requests">
+      <created>1588866948721</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588866948721</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="set language level to 11 permanently" />
-    <option name="LAST_COMMIT_MESSAGE" value="set language level to 11 permanently" />
+    <MESSAGE value="added Esri connector to process API requests" />
+    <MESSAGE value="moved file handling methods to FileManager class" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved file handling methods to FileManager class" />
   </component>
   <component name="WindowStateProjectService">
     <state x="265" y="59" key="#Project_Structure" timestamp="1588809220693">
@@ -71,14 +81,14 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="478" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1344.800@0.0.1344.800" timestamp="1588866802293" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588857964693">
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588868708786">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588857964693" />
-    <state x="203" y="55" key="Maven.ArtifactSearchDialog" timestamp="1588861704114">
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588868708786" />
+    <state x="203" y="55" key="Maven.ArtifactSearchDialog" timestamp="1588868091478">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="203" y="55" key="Maven.ArtifactSearchDialog/0.0.1344.800@0.0.1344.800" timestamp="1588861704114" />
+    <state x="203" y="55" key="Maven.ArtifactSearchDialog/0.0.1344.800@0.0.1344.800" timestamp="1588868091478" />
     <state x="181" y="0" key="SettingsEditor" timestamp="1588857937641">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
