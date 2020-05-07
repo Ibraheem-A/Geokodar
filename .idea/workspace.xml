@@ -38,8 +38,8 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration name="GeoCoder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GeoCoder" />
+    <configuration name="GeokodarApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GeokodarApplication" />
       <module name="Geokodar" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -47,7 +47,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GeoCoder" />
+        <item itemvalue="Application.GeokodarApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -137,10 +137,10 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="411" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1344.800@0.0.1344.800" timestamp="1588882723325" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588890165200">
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588890248824">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588890165200" />
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588890248824" />
     <state width="1301" height="203" key="GridCell.Tab.0.bottom" timestamp="1588889834177">
       <screen x="0" y="0" width="1344" height="800" />
     </state>

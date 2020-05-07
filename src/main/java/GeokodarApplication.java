@@ -6,7 +6,7 @@ import util.FileWriterUtil;
 import java.io.File;
 import java.util.ArrayList;
 
-public class GeoCoder {
+public class GeokodarApplication {
     public static void main(String[] args) {
         String path = "/C:/Users/adeni/OneDrive/Desktop/Amazon_Fullfillment-Zentren.xlsx";
         path = path.replace("/", File.separator);
