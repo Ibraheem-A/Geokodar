@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90f8ca08-6988-4284-897a-fc08ae7af3d6" name="Default Changelist" comment="" />
+    <list default="true" id="90f8ca08-6988-4284-897a-fc08ae7af3d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/api/EsriConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,13 +48,37 @@
       <option name="presentableId" value="Default" />
       <updated>1588806236606</updated>
     </task>
+    <task id="LOCAL-00001" summary="set language level to 11 permanently">
+      <created>1588857965463</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588857965463</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="set language level to 11 permanently" />
+    <option name="LAST_COMMIT_MESSAGE" value="set language level to 11 permanently" />
   </component>
   <component name="WindowStateProjectService">
     <state x="265" y="59" key="#Project_Structure" timestamp="1588809220693">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="265" y="59" key="#Project_Structure/0.0.1344.800@0.0.1344.800" timestamp="1588809220693" />
+    <state x="478" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1588866802293">
+      <screen x="0" y="0" width="1344" height="800" />
+    </state>
+    <state x="478" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1344.800@0.0.1344.800" timestamp="1588866802293" />
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588857964693">
+      <screen x="0" y="0" width="1344" height="800" />
+    </state>
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588857964693" />
+    <state x="203" y="55" key="Maven.ArtifactSearchDialog" timestamp="1588861704114">
+      <screen x="0" y="0" width="1344" height="800" />
+    </state>
+    <state x="203" y="55" key="Maven.ArtifactSearchDialog/0.0.1344.800@0.0.1344.800" timestamp="1588861704114" />
     <state x="181" y="0" key="SettingsEditor" timestamp="1588857937641">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
