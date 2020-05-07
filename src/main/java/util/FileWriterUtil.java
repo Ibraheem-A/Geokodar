@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 public class FileWriterUtil {
 
-    String outputPath = "output/result_" + java.time.LocalDateTime.now();
+    static String outputPath = "output/result_" + java.time.LocalDateTime.now();
 
-    public boolean writeResultsToFile(ArrayList<Location> listOfResults, String extension){
+    public static boolean writeResultsToFile(ArrayList<Location> listOfResults, String extension){
         switch (extension){
             case "csv":
                 writeToCsv(listOfResults);
@@ -25,7 +25,7 @@ public class FileWriterUtil {
         }
     }
 
-    private void writeToCsv(ArrayList<Location> listOfResults){
+    private static void writeToCsv(ArrayList<Location> listOfResults){
         File filename = new File(outputPath + ".csv");
         try(FileWriter fileWriter = new FileWriter(filename);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)){
@@ -40,7 +40,7 @@ public class FileWriterUtil {
         }
     }
 
-    private void writeToXlsx(ArrayList<Location> listOfResults){
+    private static void writeToXlsx(ArrayList<Location> listOfResults){
         File filename = new File(outputPath + ".xlsx");
         try (FileOutputStream fileOutputStream = new FileOutputStream(filename)){
             XSSFWorkbook workbook = new XSSFWorkbook();

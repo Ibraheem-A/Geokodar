@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90f8ca08-6988-4284-897a-fc08ae7af3d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/FileReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FileReaderUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/FileWriterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FileWriterUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588886752649</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added method to handle file read from different extensions">
+      <created>1588887172739</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588887172739</updated>
+    </task>
+    <task id="LOCAL-00006" summary="made methods static">
+      <created>1588887448393</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588887448393</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -83,7 +97,9 @@
     <MESSAGE value="moved file handling methods to FileManager class" />
     <MESSAGE value="moved file handling methods to FileReader class" />
     <MESSAGE value="added File writer util" />
-    <option name="LAST_COMMIT_MESSAGE" value="added File writer util" />
+    <MESSAGE value="added method to handle file read from different extensions" />
+    <MESSAGE value="made methods static" />
+    <option name="LAST_COMMIT_MESSAGE" value="made methods static" />
   </component>
   <component name="WindowStateProjectService">
     <state x="265" y="59" key="#Project_Structure" timestamp="1588809220693">
@@ -98,10 +114,10 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="411" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1344.800@0.0.1344.800" timestamp="1588882723325" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588887172052">
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588887447687">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588887172052" />
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588887447687" />
     <state x="203" y="55" key="Maven.ArtifactSearchDialog" timestamp="1588868091478">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
