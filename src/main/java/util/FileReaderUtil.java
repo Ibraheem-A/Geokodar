@@ -12,13 +12,13 @@ import java.util.ArrayList;
 
 public class FileReaderUtil {
 
-    public static ArrayList<String> getAddressesFromFile(String path, String sheetName, int addressColumnIndex){
+    public static ArrayList<String> getAddressesFromFile(String path, int sheetIndex, int addressColumnIndex){
         String extension = FilenameUtils.getExtension(path);
         switch (extension){
             case "csv":
                 return getAddressesFromCsv(path, addressColumnIndex);
             case "xlsx":
-                return getAddressFromXlsx(path, sheetName, addressColumnIndex);
+                return getAddressFromXlsx(path, sheetIndex, addressColumnIndex);
             default:
                 return new ArrayList<>();
         }
@@ -38,11 +38,11 @@ public class FileReaderUtil {
         return addressColumn;
     }
 
-    private static ArrayList<String> getAddressFromXlsx(String path, String sheetName, int addressColumnIndex){
+    private static ArrayList<String> getAddressFromXlsx(String path, int sheetIndex, int addressColumnIndex){
         ArrayList<String> addressColumn= new ArrayList<>();
         try (FileInputStream fileInputStream = new FileInputStream(new File(path));
              XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream)){
-            XSSFSheet sheet = workbook.getSheet(sheetName);
+            XSSFSheet sheet = workbook.getSheetAt(sheetIndex);
             while (sheet.iterator().hasNext()){
                 Row currentRow = sheet.iterator().next();
                 Cell addressCell = currentRow.getCell(addressColumnIndex);
