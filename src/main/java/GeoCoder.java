@@ -11,6 +11,10 @@ public class GeoCoder {
 
     }
 
+    private void geocodeAddress(){
+
+    }
+
     private ArrayList<String> getAddressesFromCsv(String path, int columnIndex){
         ArrayList<String> addressColumn= new ArrayList<>();
         try (FileReader fileReader = new FileReader(new File(path));
