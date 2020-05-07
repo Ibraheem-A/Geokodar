@@ -8,12 +8,12 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.*;
 import java.util.ArrayList;
 
-public class FileReader {
+public class FileReaderUtil {
 
 
     public ArrayList<String> getAddressesFromCsv(String path, int addressColumnIndex){
         ArrayList<String> addressColumn= new ArrayList<>();
-        try (java.io.FileReader fileReader = new java.io.FileReader(new File(path));
+        try (FileReader fileReader = new FileReader(new File(path));
              BufferedReader csvReader = new BufferedReader(fileReader)){
             String row;
             while (!(row = csvReader.readLine()).equals(null)){

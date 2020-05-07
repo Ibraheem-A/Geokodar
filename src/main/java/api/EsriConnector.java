@@ -58,7 +58,7 @@ public class EsriConnector {
         return new double[] {x, y};
     }
 
-    class Location{
+    public class Location{
         private String address;
         private double x;
         private double y;
