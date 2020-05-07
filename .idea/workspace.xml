@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90f8ca08-6988-4284-897a-fc08ae7af3d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/FileWriterUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/api/EsriConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/EsriConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FileReaderUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/FileReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FileReaderUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588868786225</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added File writer util">
+      <created>1588886752649</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588886752649</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -78,7 +82,8 @@
     <MESSAGE value="added Esri connector to process API requests" />
     <MESSAGE value="moved file handling methods to FileManager class" />
     <MESSAGE value="moved file handling methods to FileReader class" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved file handling methods to FileReader class" />
+    <MESSAGE value="added File writer util" />
+    <option name="LAST_COMMIT_MESSAGE" value="added File writer util" />
   </component>
   <component name="WindowStateProjectService">
     <state x="265" y="59" key="#Project_Structure" timestamp="1588809220693">
@@ -93,10 +98,10 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="411" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1344.800@0.0.1344.800" timestamp="1588882723325" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588868785536">
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588887100788">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588868785536" />
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588887100788" />
     <state x="203" y="55" key="Maven.ArtifactSearchDialog" timestamp="1588868091478">
       <screen x="0" y="0" width="1344" height="800" />
     </state>

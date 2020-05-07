@@ -1,5 +1,7 @@
 package util;
 
+import api.EsriConnector;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -10,8 +12,19 @@ import java.util.ArrayList;
 
 public class FileReaderUtil {
 
+    public static ArrayList<String> getAddressesFromFile(String path, String sheetName, int addressColumnIndex){
+        String extension = FilenameUtils.getExtension(path);
+        switch (extension){
+            case "csv":
+                return getAddressesFromCsv(path, addressColumnIndex);
+            case "xlsx":
+                return getAddressFromXlsx(path, sheetName, addressColumnIndex);
+            default:
+                return new ArrayList<>();
+        }
+    }
 
-    public ArrayList<String> getAddressesFromCsv(String path, int addressColumnIndex){
+    private static ArrayList<String> getAddressesFromCsv(String path, int addressColumnIndex){
         ArrayList<String> addressColumn= new ArrayList<>();
         try (FileReader fileReader = new FileReader(new File(path));
              BufferedReader csvReader = new BufferedReader(fileReader)){
@@ -25,7 +38,7 @@ public class FileReaderUtil {
         return addressColumn;
     }
 
-    public ArrayList<String> getAddressFromXlsx(String path, String sheetName, int addressColumnIndex){
+    private static ArrayList<String> getAddressFromXlsx(String path, String sheetName, int addressColumnIndex){
         ArrayList<String> addressColumn= new ArrayList<>();
         try (FileInputStream fileInputStream = new FileInputStream(new File(path));
              XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream)){
