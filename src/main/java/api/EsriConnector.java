@@ -5,13 +5,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.time.LocalDate;
 
 import org.json.*;
 
 public class EsriConnector {
 
-    public Location getCoordinatesFromServer(String address){
+    public static Location getCoordinatesFromServer(String address){
         String url = "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/" +
                 "findAddressCandidates?singleLine="+ address + "&forStorage=false&outSR=5684&f=pjson";
         String json = downloadJsonFromServer(url);
@@ -20,7 +19,7 @@ public class EsriConnector {
         return new Location(address, coord[0], coord[1]);
     }
 
-    private String downloadJsonFromServer(String... strings){
+    private static String downloadJsonFromServer(String... strings){
         StringBuilder json = new StringBuilder();
         URL url;
         HttpURLConnection httpURLConnection;
@@ -42,7 +41,7 @@ public class EsriConnector {
         }
     }
     
-    private double[] getCoordinatesFromJson(String json){
+    private static double[] getCoordinatesFromJson(String json){
         double x, y;
 
         JSONObject jsonObject = new JSONObject(json);
@@ -58,7 +57,7 @@ public class EsriConnector {
         return new double[] {x, y};
     }
 
-    public class Location{
+    public static class Location{
         private String address;
         private double x;
         private double y;
