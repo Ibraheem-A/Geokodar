@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="90f8ca08-6988-4284-897a-fc08ae7af3d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/api/EsriConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/EsriConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/FileWriterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FileWriterUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588903733459</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added method to replace umlaut">
+      <created>1588904455360</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1588904455360</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -163,7 +170,8 @@
     <MESSAGE value="added logger" />
     <MESSAGE value="improvements" />
     <MESSAGE value="added list trimming to address list, to avoid null positions in array list" />
-    <option name="LAST_COMMIT_MESSAGE" value="added list trimming to address list, to avoid null positions in array list" />
+    <MESSAGE value="added method to replace umlaut" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method to replace umlaut" />
   </component>
   <component name="WindowStateProjectService">
     <state x="265" y="59" key="#Project_Structure" timestamp="1588809220693">
@@ -182,26 +190,26 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="411" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1344.800@0.0.1344.800" timestamp="1588882723325" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588903732721">
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588904454697">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588903732721" />
-    <state width="1301" height="203" key="GridCell.Tab.0.bottom" timestamp="1588904326691">
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588904454697" />
+    <state width="1301" height="203" key="GridCell.Tab.0.bottom" timestamp="1588904629408">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.bottom/0.0.1344.800@0.0.1344.800" timestamp="1588904326691" />
-    <state width="1301" height="203" key="GridCell.Tab.0.center" timestamp="1588904326691">
+    <state width="1301" height="203" key="GridCell.Tab.0.bottom/0.0.1344.800@0.0.1344.800" timestamp="1588904629408" />
+    <state width="1301" height="203" key="GridCell.Tab.0.center" timestamp="1588904629408">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.center/0.0.1344.800@0.0.1344.800" timestamp="1588904326691" />
-    <state width="1301" height="203" key="GridCell.Tab.0.left" timestamp="1588904326691">
+    <state width="1301" height="203" key="GridCell.Tab.0.center/0.0.1344.800@0.0.1344.800" timestamp="1588904629408" />
+    <state width="1301" height="203" key="GridCell.Tab.0.left" timestamp="1588904629408">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.left/0.0.1344.800@0.0.1344.800" timestamp="1588904326691" />
-    <state width="1301" height="203" key="GridCell.Tab.0.right" timestamp="1588904326691">
+    <state width="1301" height="203" key="GridCell.Tab.0.left/0.0.1344.800@0.0.1344.800" timestamp="1588904629408" />
+    <state width="1301" height="203" key="GridCell.Tab.0.right" timestamp="1588904629408">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.right/0.0.1344.800@0.0.1344.800" timestamp="1588904326691" />
+    <state width="1301" height="203" key="GridCell.Tab.0.right/0.0.1344.800@0.0.1344.800" timestamp="1588904629408" />
     <state x="203" y="55" key="Maven.ArtifactSearchDialog" timestamp="1588868091478">
       <screen x="0" y="0" width="1344" height="800" />
     </state>

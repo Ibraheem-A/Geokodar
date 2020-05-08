@@ -14,7 +14,7 @@ public class FileWriterUtil {
 
     private static final Logger LOG = LogManager.getLogger(FileWriterUtil.class.getName());
 
-    public static String outputPath = "output/result_" + java.time.LocalDateTime.now();
+    public static String outputPath = "output" + File.separator + "result_" + java.time.LocalDateTime.now();
 
     public static boolean writeResultsToFile(ArrayList<Location> listOfResults){
         LOG.info("Starting write address and coordinates to file...");
@@ -22,19 +22,17 @@ public class FileWriterUtil {
         switch (extension){
             case "csv":
                 LOG.info("File output will be written to csv");
-                writeToCsv(listOfResults);
-                return true;
+                return writeToCsv(listOfResults);
             case "xlsx":
                 LOG.info("File output will be written to xlsx");
-                writeToXlsx(listOfResults);
-                return true;
+                return writeToXlsx(listOfResults);
             default:
                 LOG.warn("Extension could not be determined, no output file will be written!!");
                 return false;
         }
     }
 
-    private static void writeToCsv(ArrayList<Location> listOfResults){
+    private static boolean writeToCsv(ArrayList<Location> listOfResults){
         LOG.info("Starting write output to csv...");
         File filename = new File(outputPath + ".csv");
         try(FileWriter fileWriter = new FileWriter(filename);
@@ -47,12 +45,14 @@ public class FileWriterUtil {
                 rowCount += 1;
             }
             LOG.info("Address list successfully written to csv with " + rowCount + "rows." );
+            return true;
         } catch (IOException e){
             LOG.error("Write output to csv failed: " + e.getMessage());
+            return false;
         }
     }
 
-    private static void writeToXlsx(ArrayList<Location> listOfResults){
+    private static boolean writeToXlsx(ArrayList<Location> listOfResults){
         LOG.info("Starting write output to xlsx...");
         File filename = new File(outputPath + ".xlsx");
         try (FileOutputStream fileOutputStream = new FileOutputStream(filename)){
@@ -68,8 +68,10 @@ public class FileWriterUtil {
             }
             workbook.write(fileOutputStream);
             LOG.info("Address list successfully written to xlsx with " + rowCount + "rows." );
+            return true;
         } catch (IOException e) {
             LOG.error("Write output to xlsx failed: " + e.getMessage());
+            return false;
         }
     }
 }
