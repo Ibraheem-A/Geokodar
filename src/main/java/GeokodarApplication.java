@@ -7,6 +7,8 @@ import util.FileReaderUtil;
 import util.FileWriterUtil;
 
 import java.io.File;
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class GeokodarApplication {
@@ -14,8 +16,8 @@ public class GeokodarApplication {
     private static final Logger LOG = LogManager.getLogger(GeokodarApplication.class.getName());
 
     public static void main(String[] args) {
-        LOG.info("Starting Aplication...");
-        LOG.info("Start time: " + java.time.LocalDateTime.now());
+        LOG.info("--------------STARTING GEOKODAR--------------");
+        LocalDateTime startTime = java.time.LocalDateTime.now();
 
         String path = "/C:/Users/adeni/OneDrive/Desktop/Amazon_Fullfillment-Zentren.xlsx";
         path = path.replace("/", File.separator);
@@ -36,6 +38,8 @@ public class GeokodarApplication {
             LOG.info("File output written as " + FilenameUtils.getBaseName(FileWriterUtil.outputPath) + "successfully to: " + FileWriterUtil.outputPath);
         }
 
-        LOG.info("Finish time: " + java.time.LocalDateTime.now());
+        LocalDateTime finishTime = java.time.LocalDateTime.now();
+        LOG.info("Application finished. Total Duration: " + Duration.between(startTime, finishTime).getSeconds());
+
     }
 }
