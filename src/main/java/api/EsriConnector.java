@@ -12,12 +12,16 @@ import org.json.*;
 
 public class EsriConnector {
 
+    private static String[][] UMLAUT_REPLACEMENTS = { { "Ä", "Ae" }, { "Ü", "Ue" }, { "Ö", "Oe" }, { "ä", "ae" }, { "ü", "ue" }, { "ö", "oe" }, { "ß", "ss" } };
+
     private static final Logger LOG = LogManager.getLogger(EsriConnector.class.getName());
 
     public static Location getCoordinatesFromServer(String address){
         String url = "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/" +
                 "findAddressCandidates?singleLine="+ address + "&forStorage=false&outSR=5684&f=pjson";
         url = url.replace(" ", "%20");
+        url = replaceUmlaut(url);
+
         String json = downloadJsonFromServer(url);
         double[] coord = getCoordinatesFromJson(json);
 
@@ -54,14 +58,10 @@ public class EsriConnector {
         double x, y;
         try {
             LOG.info("Starting parse JSON to retrieve coordinates...");
-            LOG.info("json: " + json);
             JSONObject jsonObject = new JSONObject(json);
-            LOG.info("jsonObject: " + jsonObject.toString());
             JSONArray candidateArray = jsonObject.getJSONArray("candidates");
-            LOG.info("candidateArray: " + candidateArray.toString());
             JSONObject partObject = candidateArray.getJSONObject(0);
-            String location = partObject.getString("location");
-            JSONObject locationObject = new JSONObject(location);
+            JSONObject locationObject = partObject.getJSONObject("location");
 
             x = locationObject.getDouble("x");
             y = locationObject.getDouble("y");
@@ -75,6 +75,27 @@ public class EsriConnector {
         }
         LOG.warn("Empty coordinates list will be returned!!!");
         return new double[2];
+    }
+
+    private static String replaceUmlaut(String input) {
+
+        //replace all lower Umlauts
+        String output = input.replace("ü", "ue")
+                .replace("ö", "oe")
+                .replace("ä", "ae")
+                .replace("ß", "ss");
+
+        //first replace all capital umlaute in a non-capitalized context (e.g. Übung)
+        output = output.replace("Ü(?=[a-zäöüß ])", "Ue")
+                .replace("Ö(?=[a-zäöüß ])", "Oe")
+                .replace("Ä(?=[a-zäöüß ])", "Ae");
+
+        //now replace all the other capital umlaute
+        output = output.replace("Ü", "UE")
+                .replace("Ö", "OE")
+                .replace("Ä", "AE");
+
+        return output;
     }
 
     public static class Location{
