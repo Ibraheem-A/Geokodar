@@ -6,9 +6,13 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.*;
 
 public class EsriConnector {
+
+    private static final Logger LOG = LogManager.getLogger(EsriConnector.class.getName());
 
     public static Location getCoordinatesFromServer(String address){
         String url = "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/" +
@@ -20,6 +24,7 @@ public class EsriConnector {
     }
 
     private static String downloadJsonFromServer(String... strings){
+        LOG.info("Starting json download from server...");
         StringBuilder json = new StringBuilder();
         URL url;
         HttpURLConnection httpURLConnection;
@@ -34,8 +39,10 @@ public class EsriConnector {
                 json.append(current);
                 data = reader.read();
             }
+            LOG.info("JSON download completed successfully with: " + json.toString().toCharArray().length + " characters");
             return json.toString();
         } catch (IOException e){
+            LOG.error("JSON download failed: " + e.getMessage());
             e.printStackTrace();
             return "Failed";
         }
@@ -43,7 +50,7 @@ public class EsriConnector {
     
     private static double[] getCoordinatesFromJson(String json){
         double x, y;
-
+        LOG.info("Starting parse JSON to retrieve coordinates...");
         JSONObject jsonObject = new JSONObject(json);
         String candidates = jsonObject.getString("candidates");
         JSONArray candidateArray = new JSONArray(candidates);
@@ -53,6 +60,7 @@ public class EsriConnector {
 
         x = locationObject.getDouble("x");
         y = locationObject.getDouble("y");
+        LOG.info("Coordinates retrieved :- x: " + x + ", y: " + y);
 
         return new double[] {x, y};
     }
