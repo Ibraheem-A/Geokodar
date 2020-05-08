@@ -3,18 +3,21 @@ package util;
 import api.EsriConnector.Location;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.*;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class FileWriterUtil {
 
     private static final Logger LOG = LogManager.getLogger(FileWriterUtil.class.getName());
 
-    public static String outputPath = "output" + File.separator + "result_" + java.time.LocalDateTime.now();
+    static String localDateTime = java.time.LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'_'HH;mm;ss"));
+    public static String outputPath = "output" + File.separator + "result_" + localDateTime;
 
     static String directoryName = "output" + File.separator;
     static File directory = new File(directoryName);
@@ -67,10 +70,16 @@ public class FileWriterUtil {
             XSSFSheet sheet = workbook.createSheet("Address_Coordinates");
             int rowCount = 0;
             for (Location line : listOfResults) {
-                Row row = sheet.iterator().next();
-                row.iterator().next().setCellValue(line.getAddress());
-                row.iterator().next().setCellValue(line.getX());
-                row.iterator().next().setCellValue(line.getY());
+                Row row = sheet.createRow(rowCount);
+
+                Cell cell = row.createCell(1);
+                cell.setCellValue(line.getAddress());
+
+                Cell cell2 = row.createCell(2);
+                cell2.setCellValue(line.getX());
+
+                Cell cell3 = row.createCell(3);
+                cell3.setCellValue(line.getY());
                 rowCount +=1;
             }
             workbook.write(fileOutputStream);
@@ -78,6 +87,7 @@ public class FileWriterUtil {
             return true;
         } catch (IOException e) {
             LOG.error("Write output to xlsx failed!!!  Reason: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }

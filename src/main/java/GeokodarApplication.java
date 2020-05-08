@@ -39,7 +39,7 @@ public class GeokodarApplication {
         }
 
         LocalDateTime finishTime = java.time.LocalDateTime.now();
-        LOG.info("Application finished. Total Duration: " + Duration.between(startTime, finishTime).getSeconds());
+        LOG.info("Application finished. Total Duration: " + Duration.between(startTime, finishTime).getSeconds() + "seconds");
 
     }
 }
