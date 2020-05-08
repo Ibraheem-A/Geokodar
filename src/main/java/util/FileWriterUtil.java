@@ -1,7 +1,6 @@
 package util;
 
 import api.EsriConnector.Location;
-import org.apache.commons.io.FilenameUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Row;
@@ -50,7 +49,6 @@ public class FileWriterUtil {
             LOG.info("Address list successfully written to csv with " + rowCount + "rows." );
         } catch (IOException e){
             LOG.error("Write output to csv failed: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 
@@ -72,7 +70,6 @@ public class FileWriterUtil {
             LOG.info("Address list successfully written to xlsx with " + rowCount + "rows." );
         } catch (IOException e) {
             LOG.error("Write output to xlsx failed: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 }

@@ -23,7 +23,7 @@ public class GeokodarApplication {
         LOG.info("Loading input file from " + path);
 
         ArrayList<Location> locationsList = new ArrayList<>();
-        ArrayList<String> addressesList = FileReaderUtil.getAddressesFromFile(path, 1, 2);
+        ArrayList<String> addressesList = FileReaderUtil.getAddressesFromFile(path, 1, 2, 1);
 
         assert !addressesList.isEmpty();
 
