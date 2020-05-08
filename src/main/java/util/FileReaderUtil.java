@@ -70,10 +70,9 @@ public class FileReaderUtil {
                 LOG.info(address);
                 addressList.add(address);
             }
-            if(numberOfHeaderRows != 0){
-                for (int i = 0; i < numberOfHeaderRows; i++){
-                    addressList.remove(i);
-                }
+            if(numberOfHeaderRows > 0){
+                addressList.subList(0, numberOfHeaderRows).clear();
+                addressList.removeIf(s -> s.trim().isEmpty());
             }
             LOG.info("Address list successfully populated from xlsx with " + addressList.size() + " addresses");
             LOG.info(addressList.get(0) + "\n" + addressList.get(1) + "\n" + addressList.get(2) + "\n" +  "..." + "\n" +  "...");

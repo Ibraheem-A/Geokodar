@@ -17,6 +17,7 @@ public class EsriConnector {
     public static Location getCoordinatesFromServer(String address){
         String url = "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/" +
                 "findAddressCandidates?singleLine="+ address + "&forStorage=false&outSR=5684&f=pjson";
+        url = url.replace(" ", "%20");
         String json = downloadJsonFromServer(url);
         double[] coord = getCoordinatesFromJson(json);
 
@@ -30,6 +31,7 @@ public class EsriConnector {
         HttpURLConnection httpURLConnection;
         try{
             url = new URL(strings[0]);
+            LOG.info("URL: " + url);
             httpURLConnection = (HttpURLConnection) url.openConnection();
             InputStream in = httpURLConnection.getInputStream();
             InputStreamReader reader = new InputStreamReader(in);
@@ -50,19 +52,29 @@ public class EsriConnector {
     
     private static double[] getCoordinatesFromJson(String json){
         double x, y;
-        LOG.info("Starting parse JSON to retrieve coordinates...");
-        JSONObject jsonObject = new JSONObject(json);
-        String candidates = jsonObject.getString("candidates");
-        JSONArray candidateArray = new JSONArray(candidates);
-        JSONObject partObject = candidateArray.getJSONObject(0);
-        String location = partObject.getString("location");
-        JSONObject locationObject = new JSONObject(location);
+        try {
+            LOG.info("Starting parse JSON to retrieve coordinates...");
+            LOG.info("json: " + json);
+            JSONObject jsonObject = new JSONObject(json);
+            LOG.info("jsonObject: " + jsonObject.toString());
+            JSONArray candidateArray = jsonObject.getJSONArray("candidates");
+            LOG.info("candidateArray: " + candidateArray.toString());
+            JSONObject partObject = candidateArray.getJSONObject(0);
+            String location = partObject.getString("location");
+            JSONObject locationObject = new JSONObject(location);
 
-        x = locationObject.getDouble("x");
-        y = locationObject.getDouble("y");
-        LOG.info("Coordinates retrieved :- x: " + x + ", y: " + y);
+            x = locationObject.getDouble("x");
+            y = locationObject.getDouble("y");
+            LOG.info("Coordinates retrieved :- x: " + x + ", y: " + y);
 
-        return new double[] {x, y};
+            return new double[] {x, y};
+        } catch (JSONException e){
+            LOG.error("parse JSON failed " + e.getMessage());
+            e.printStackTrace();
+            System.exit(-1);
+        }
+        LOG.warn("Empty coordinates list will be returned!!!");
+        return new double[2];
     }
 
     public static class Location{

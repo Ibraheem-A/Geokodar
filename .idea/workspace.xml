@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90f8ca08-6988-4284-897a-fc08ae7af3d6" name="Default Changelist" comment="added logger">
+    <list default="true" id="90f8ca08-6988-4284-897a-fc08ae7af3d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeokodarApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeokodarApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/EsriConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/EsriConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/FileReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FileReaderUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/FileWriterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FileWriterUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588897630992</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="improvements">
+      <created>1588899702894</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1588899702894</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -149,7 +155,8 @@
     <MESSAGE value="added implementation to run Geocoder" />
     <MESSAGE value="modified class name" />
     <MESSAGE value="added logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="added logger" />
+    <MESSAGE value="improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvements" />
   </component>
   <component name="WindowStateProjectService">
     <state x="265" y="59" key="#Project_Structure" timestamp="1588809220693">
@@ -168,26 +175,26 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="411" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1344.800@0.0.1344.800" timestamp="1588882723325" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588899691358">
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588899702121">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588899691358" />
-    <state width="1301" height="203" key="GridCell.Tab.0.bottom" timestamp="1588899691372">
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588899702121" />
+    <state width="1301" height="203" key="GridCell.Tab.0.bottom" timestamp="1588903654175">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.bottom/0.0.1344.800@0.0.1344.800" timestamp="1588899691372" />
-    <state width="1301" height="203" key="GridCell.Tab.0.center" timestamp="1588899691372">
+    <state width="1301" height="203" key="GridCell.Tab.0.bottom/0.0.1344.800@0.0.1344.800" timestamp="1588903654175" />
+    <state width="1301" height="203" key="GridCell.Tab.0.center" timestamp="1588903654175">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.center/0.0.1344.800@0.0.1344.800" timestamp="1588899691372" />
-    <state width="1301" height="203" key="GridCell.Tab.0.left" timestamp="1588899691372">
+    <state width="1301" height="203" key="GridCell.Tab.0.center/0.0.1344.800@0.0.1344.800" timestamp="1588903654175" />
+    <state width="1301" height="203" key="GridCell.Tab.0.left" timestamp="1588903654175">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.left/0.0.1344.800@0.0.1344.800" timestamp="1588899691372" />
-    <state width="1301" height="203" key="GridCell.Tab.0.right" timestamp="1588899691372">
+    <state width="1301" height="203" key="GridCell.Tab.0.left/0.0.1344.800@0.0.1344.800" timestamp="1588903654175" />
+    <state width="1301" height="203" key="GridCell.Tab.0.right" timestamp="1588903654175">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.right/0.0.1344.800@0.0.1344.800" timestamp="1588899691372" />
+    <state width="1301" height="203" key="GridCell.Tab.0.right/0.0.1344.800@0.0.1344.800" timestamp="1588903654175" />
     <state x="203" y="55" key="Maven.ArtifactSearchDialog" timestamp="1588868091478">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
