@@ -33,7 +33,7 @@ public class GeokodarApplication {
         }
 
         if(FileWriterUtil.writeResultsToFile(locationsList)){
-            LOG.info("File output written a" + FilenameUtils.getBaseName(FileWriterUtil.outputPath) + "successfully to: " + FileWriterUtil.outputPath);
+            LOG.info("File output written as " + FilenameUtils.getBaseName(FileWriterUtil.outputPath) + "successfully to: " + FileWriterUtil.outputPath);
         }
 
         LOG.info("Finish time: " + java.time.LocalDateTime.now());
