@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90f8ca08-6988-4284-897a-fc08ae7af3d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeokodarApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeokodarApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/FileReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FileReaderUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/FileWriterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FileWriterUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588904784022</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="refactored log output">
+      <created>1588904986704</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1588904986704</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -207,26 +213,26 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="411" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1344.800@0.0.1344.800" timestamp="1588882723325" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588904783367">
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1588905545684">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588904783367" />
-    <state width="1301" height="203" key="GridCell.Tab.0.bottom" timestamp="1588904629408">
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1344.800@0.0.1344.800" timestamp="1588905545684" />
+    <state width="1301" height="203" key="GridCell.Tab.0.bottom" timestamp="1588905545699">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.bottom/0.0.1344.800@0.0.1344.800" timestamp="1588904629408" />
-    <state width="1301" height="203" key="GridCell.Tab.0.center" timestamp="1588904629408">
+    <state width="1301" height="203" key="GridCell.Tab.0.bottom/0.0.1344.800@0.0.1344.800" timestamp="1588905545699" />
+    <state width="1301" height="203" key="GridCell.Tab.0.center" timestamp="1588905545699">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.center/0.0.1344.800@0.0.1344.800" timestamp="1588904629408" />
-    <state width="1301" height="203" key="GridCell.Tab.0.left" timestamp="1588904629408">
+    <state width="1301" height="203" key="GridCell.Tab.0.center/0.0.1344.800@0.0.1344.800" timestamp="1588905545699" />
+    <state width="1301" height="203" key="GridCell.Tab.0.left" timestamp="1588905545699">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.left/0.0.1344.800@0.0.1344.800" timestamp="1588904629408" />
-    <state width="1301" height="203" key="GridCell.Tab.0.right" timestamp="1588904629408">
+    <state width="1301" height="203" key="GridCell.Tab.0.left/0.0.1344.800@0.0.1344.800" timestamp="1588905545699" />
+    <state width="1301" height="203" key="GridCell.Tab.0.right" timestamp="1588905545699">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state width="1301" height="203" key="GridCell.Tab.0.right/0.0.1344.800@0.0.1344.800" timestamp="1588904629408" />
+    <state width="1301" height="203" key="GridCell.Tab.0.right/0.0.1344.800@0.0.1344.800" timestamp="1588905545699" />
     <state x="203" y="55" key="Maven.ArtifactSearchDialog" timestamp="1588868091478">
       <screen x="0" y="0" width="1344" height="800" />
     </state>

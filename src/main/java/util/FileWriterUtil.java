@@ -16,7 +16,14 @@ public class FileWriterUtil {
 
     public static String outputPath = "output" + File.separator + "result_" + java.time.LocalDateTime.now();
 
+    static String directoryName = "output" + File.separator;
+    static File directory = new File(directoryName);
+
     public static boolean writeResultsToFile(ArrayList<Location> listOfResults){
+        if(!directory.exists()){
+            directory.mkdirs();
+        }
+
         LOG.info("Starting write address and coordinates to file...");
         String extension = FileReaderUtil.extension;
         switch (extension){
