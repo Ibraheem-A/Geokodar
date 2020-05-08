@@ -46,7 +46,7 @@ public class FileReaderUtil {
             LOG.info(addressList.get(0) + "\n" + addressList.get(1) + "\n" + addressList.get(3) + "\n" +  "..." + "\n" +  "...");
             return addressList;
         } catch (IOException e) {
-            LOG.error("get address from csv failed: " + e.getMessage());
+            LOG.error("get address from csv failed!!!  Reason: " + e.getMessage());
             LOG.warn("Empty address list will be returned!!!");
             return new ArrayList<>();
         }
@@ -79,7 +79,7 @@ public class FileReaderUtil {
             return addressList;
 
         } catch (IOException e) {
-            LOG.error("get address from xlsx failed: " + e.getMessage());
+            LOG.error("get address from xlsx failed!!!  Reason: " + e.getMessage());
             LOG.warn("Empty address list will be returned!!!");
             return new ArrayList<>();
         }

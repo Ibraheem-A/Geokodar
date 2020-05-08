@@ -37,7 +37,5 @@ public class GeokodarApplication {
         }
 
         LOG.info("Finish time: " + java.time.LocalDateTime.now());
-
-
     }
 }

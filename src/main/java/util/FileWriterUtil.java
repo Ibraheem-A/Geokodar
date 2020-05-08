@@ -47,7 +47,7 @@ public class FileWriterUtil {
             LOG.info("Address list successfully written to csv with " + rowCount + "rows." );
             return true;
         } catch (IOException e){
-            LOG.error("Write output to csv failed: " + e.getMessage());
+            LOG.error("Write output to csv failed!!!  Reason: " + e.getMessage());
             return false;
         }
     }
@@ -70,7 +70,7 @@ public class FileWriterUtil {
             LOG.info("Address list successfully written to xlsx with " + rowCount + "rows." );
             return true;
         } catch (IOException e) {
-            LOG.error("Write output to xlsx failed: " + e.getMessage());
+            LOG.error("Write output to xlsx failed!!!  Reason: " + e.getMessage());
             return false;
         }
     }
